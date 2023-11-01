@@ -15,7 +15,12 @@ let myList = {
             id:2,
             name:"demo2"
         },
-    ]
+    ],
+    title:"Title",
+    address:{
+        country:"Nepal",
+        phoneNumber:['987654310','8765464694']
+    }
 }
 describe('Assert Check',function(){
     
@@ -50,5 +55,35 @@ describe("should check",() => {
 
 //expect 
 describe('expect check',() => {
+    it('match string',()=> {
+        expect(userName).to.be.a('string')
+    })
 
+    it('equal string',function(){
+        expect(userName).to.equal('Test');
+    })
+
+    it('string length',() => {
+        expect(userName).to.lengthOf(4);
+    })
+    it('object matching',()=> {
+        expect(myList).to.have.property('item').with.lengthOf(2);
+    })
+
+    it('object matching key',() =>{
+        expect(myList).to.have.all.keys('item','title','address');
+    })
+    
+    it('contains phone number',() => {
+        expect(myList).to.have.nested.property('address.phoneNumber[1]')
+    })
+
+    it('contains country nepal',() => {
+        expect(myList).to.have.nested.include({'address.country':'Nepal'})
+    })
+
+    it('contains phone number',() => {
+        expect(myList).to.have.nested.include({'address.phoneNumber.0':'987654310'})
+        // expect(myList).to.have.nested.include({'address.phoneNumber[0]':'987654310'}) //both works
+    })
 })
