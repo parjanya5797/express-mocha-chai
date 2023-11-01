@@ -16,6 +16,21 @@ class StudentController {
     getInfo(type,status) {
         return type;
     }
+
+    finalMarks(total) {
+        let external = this.getExternalMarks(total);
+        let internal = this.getInternalMarks(total);
+        let finalSum = external + internal + 10;
+        return finalSum;
+    }
+
+    getExternalMarks(total) {
+        return total + 1;
+    }
+
+    getInternalMarks(total) {
+        return total - 1;
+    }
 }
 
 module.exports = StudentController
