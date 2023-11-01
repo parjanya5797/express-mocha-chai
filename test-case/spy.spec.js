@@ -9,7 +9,7 @@ var assert = chai.assert;
 var student = require('../controllers/studentController');
 var studentObj = new student();
 
-describe('Spay',function(){
+describe('Spy',function(){
     
     it('test userInfo Function',() => {
         expect(studentObj.userId()).to.be.equal(12);
