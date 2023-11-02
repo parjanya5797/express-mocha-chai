@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 class StudentController {
     constructor() {
 
@@ -35,6 +37,18 @@ class StudentController {
     dbData() {
         return new Promise((resolve,reject)=>{
             setTimeout(() => resolve(10),1000);
+        })
+    }
+
+    thirdPartyApi() {
+        return new Promise((resolve,reject) => {
+            axios.get('https://dummyjson.com/products')
+            .then(response => {
+                resolve(response.data);
+            })
+            .catch(error => {
+                reject(error);
+            })
         })
     }
 }
