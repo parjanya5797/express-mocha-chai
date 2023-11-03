@@ -25,9 +25,9 @@
 
 
 
-    it.only('Check String Match',()=> {   // Only runs this testcase regardless of number of test cases.
-        expect(string).to.be.equal('Test Data');
-    })
+    // it.only('Check String Match',()=> {   // Only runs this testcase regardless of number of test cases.
+    //     expect(string).to.be.equal('Test Data');
+    // })
 
     it.skip('Check String Length ',() => {  // Skips this test using it.skip
         expect(string).to.be.length(9);
@@ -44,8 +44,8 @@
     })
  })
 
- describe.only("Skipped hook",() => { //runs this whole test suite only
-    it('Check String Length Hook 2',() => {
-        expect(string).to.be.length(9);
-    })
- })
+//  describe.only("Skipped hook",() => { //runs this whole test suite only
+//     it('Check String Length Hook 2',() => {
+//         expect(string).to.be.length(9);
+//     })
+//  })
