@@ -10,9 +10,6 @@
     "test-report2": "mocha 'test-case/**/*.spec.js' --reporter mochawesome --reporter-options reportDir=Report, reportFilename=TestCase-Report",
     "coverage":"nyc --reporter=lcov --reporter=text npm run test"
   },
-  "nyc": {
-    "exclude":"test-case"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

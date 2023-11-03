@@ -1,0 +1,4 @@
+{
+    "exclude":"test-case",
+    "include":"controllers"
+}
