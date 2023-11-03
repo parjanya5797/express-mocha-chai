@@ -5,6 +5,6 @@ const app = express();
 
 app.use('',require('./routes/index'));
 
-app.listen(port,() => {
+module.exports = app.listen(port,() => {
     console.log(`App is listening at http://localhost:${port}`);
 })

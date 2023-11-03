@@ -1,5 +1,10 @@
 const userList = (req,res) => {
-    res.send("Hello World !!!");
+    res.send({
+        statusText:"success",
+        data:{
+            list:"hello"
+        }
+    });
 }
 
 const newsData = () => {
